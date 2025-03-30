@@ -1,0 +1,67 @@
+/* Evita que el body afecte el header */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+/* Centrar solo el formulario */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Toda la pantalla */
+}
+
+/* Estilos del formulario */
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+
+/* Datos de entrada */
+.form-signin .form-control {
+  border-radius: 10px;
+  padding: 10px;
+  margin: 7px;
+}
+
+.form-signin .checkbox {
+  margin-right: 17%;
+  padding-bottom: 7%;
+  transition: all 0.2s ease-in-out;
+
+}
+
+.input-group-text i {
+  color: #262626; /* Azul Bootstrap */
+  font-size: 1.2rem; /* Ajustar tamaño si es necesario */
+}
+
+/* Botón */
+.form-signin button {
+  background-color: #262626;
+  color: #f8f9fa;
+  border: none;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 5px;
+  width: 100px;
+  height: 40px;
+  transition: 0.3s;
+}
+
+.form-signin button:hover { 
+  background-color: #262626;
+  color: gray;
+}
+
+/* Texto de copyright */
+.text-muted {
+  font-size: 14px;
+}
