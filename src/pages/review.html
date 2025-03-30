@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review - Telcel</title>
+
+    <link href="../../assets/styles/review.css" rel="stylesheet">
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch("../../assets/components/header.html")
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById("header-container").innerHTML = data;
+                });
+        });
+    </script>
+</head>
+<body>
+
+    <div id="header-container"></div>
+
+    <div class="main-container">
+        <div class="review-container">
+            <div class="review-header">
+                <img src="../../assets/images/user_image.png" alt="Imagen del usuario" width="70">
+                <h1 class="review-page-title">Telcel</h1>
+            </div>
+
+            <div class="review-actions">
+                <img src="../../assets/images/like_icon.png" alt="Like" class="like-btn" width="30">
+                <span class="like-count">0</span>
+                <img src="../../assets/images/dislike_icon.png" alt="Dislike" class="dislike-btn" width="30">
+                <span class="like-count">0</span>
+            </div>
+
+            <div class="review-info">
+                <p><strong>Página Oficial:</strong> <a href="https://www.telcel.com" target="_blank">telcel.com</a></p>
+            </div>
+        </div>
+
+        <div class="reviews-container">
+            <h2>Reseñas mas populares</h2>
+            <div class="reviews-list">
+                <div class="review-item">
+                    <p><strong>Juan Pérez</strong>: "Excelente servicio, muy rápido y confiable."</p>
+                    <div class="review-actions">
+                        <img src="../../assets/images/like_icon.png" class="like-btn" width="30">
+                        <span class="like-count">0</span>
+                        <img src="../../assets/images/dislike_icon.png" class="dislike-btn" width="30">
+                        <span class="dislike-count">0</span>
+                    </div>
+                </div>
+                <div class="review-item">
+                    <p><strong>María López</strong>: "La atención al cliente es bastante buena, aunque a veces hay largas esperas."</p>
+                    <div class="review-actions">
+                        <img src="../../assets/images/like_icon.png" class="like-btn" width="30">
+                        <span class="like-count">0</span>
+                        <img src="../../assets/images/dislike_icon.png" class="dislike-btn" width="30">
+                        <span class="dislike-count">0</span>
+                    </div>
+                </div>
+                <div class="review-item">
+                    <p><strong>Carlos García</strong>: "No me gustó que la cobertura no es tan buena en áreas rurales."</p>
+                    <div class="review-actions">
+                        <img src="../../assets/images/like_icon.png" class="like-btn" width="30">
+                        <span class="like-count">0</span>
+                        <img src="../../assets/images/dislike_icon.png" class="dislike-btn" width="30">
+                        <span class="dislike-count">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="add-review-container">
+            <h2>Añadir Nueva Reseña</h2>
+            <form id="new-review-form">
+                <label for="category-select">Selecciona una categoría:</label>
+                <select id="category-select" required>
+                    <option value="Servicio">Servicio</option>
+                    <option value="Atención al Cliente">Atención al Cliente</option>
+                    <option value="Calidad de Red">Calidad de Red</option>
+                </select>
+
+                <label for="review-text">Escribe tu reseña:</label>
+                <textarea id="review-text" rows="4" required style="resize: none;"></textarea>
+
+                <div class="radio-buttons">
+                    <input type="radio" id="like" name="like-dislike" value="like" required>
+                    <label for="like">
+                        <img src="../../assets/images/like_icon.png" width="30" alt="Like">
+                    </label>
+                    <input type="radio" id="dislike" name="like-dislike" value="dislike">
+                    <label for="dislike">
+                        <img src="../../assets/images/dislike_icon.png" width="30" alt="Dislike">
+                    </label>
+                </div>
+
+                <button type="button" class="submit-review">Enviar Reseña</button>
+            </form>
+        </div>
+    </div>  
+
+</body>
+</html>
